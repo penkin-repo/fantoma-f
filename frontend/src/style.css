@@ -1,0 +1,205 @@
+:root,
+[data-theme="dark"] {
+    /* Obsidian Studio — Dark Theme (Default) */
+    --bg-app: #111215;
+    --bg-sidebar: #16181d;
+    --bg-surface: #1c1f26;
+    --bg-surface-hover: #22262f;
+    --bg-elevated: #252a35;
+    --bg-input: #14161b;
+    --bg-row-active: rgba(217, 169, 118, 0.065);
+
+    --accent: #d9a976;
+    --accent-hover: #e5bb8d;
+    --accent-soft: rgba(217, 169, 118, 0.14);
+    --accent-border: rgba(217, 169, 118, 0.36);
+    --accent-text: #111215;
+
+    --text-main: #f2f3f5;
+    --text-secondary: #a7aebc;
+    --text-muted: #6c7383;
+
+    --border: rgba(255, 255, 255, 0.07);
+    --border-strong: rgba(255, 255, 255, 0.13);
+
+    --status-active: #34d399;
+    --status-active-glow: rgba(52, 211, 153, 0.35);
+    --status-partial: #fbbf24;
+    --status-partial-glow: rgba(251, 191, 36, 0.35);
+    --status-inactive: #4b5263;
+
+    --danger: #f87171;
+    --danger-soft: rgba(248, 113, 113, 0.12);
+    --danger-border: rgba(248, 113, 113, 0.32);
+
+    --success: #34d399;
+    --success-soft: rgba(52, 211, 153, 0.12);
+    --success-border: rgba(52, 211, 153, 0.32);
+
+    --warning: #fbbf24;
+    --warning-soft: rgba(251, 191, 36, 0.12);
+    --warning-border: rgba(251, 191, 36, 0.32);
+
+    --info: #60a5fa;
+    --info-soft: rgba(96, 165, 250, 0.12);
+    --info-border: rgba(96, 165, 250, 0.32);
+
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.28);
+    --shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.55);
+    --scrollbar-thumb: rgba(255, 255, 255, 0.12);
+    --scrollbar-thumb-hover: rgba(217, 169, 118, 0.45);
+    --switch-track: #2e3340;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color-scheme: dark;
+}
+
+[data-theme="light"] {
+    /* Warm Paper — Refined Light Theme */
+    --bg-app: #fdfcf9;
+    --bg-sidebar: #f4f1e8;
+    --bg-surface: #ffffff;
+    --bg-surface-hover: #f7f4ec;
+    --bg-elevated: #ffffff;
+    --bg-input: #ffffff;
+    --bg-row-active: rgba(139, 126, 102, 0.06);
+
+    --accent: #8b7e66;
+    --accent-hover: #a68d6b;
+    --accent-soft: rgba(139, 126, 102, 0.12);
+    --accent-border: rgba(139, 126, 102, 0.35);
+    --accent-text: #ffffff;
+
+    --text-main: #23201e;
+    --text-secondary: #544e49;
+    --text-muted: #847b74;
+
+    --border: #e7e2d6;
+    --border-strong: #d6cfc0;
+
+    --status-active: #16a34a;
+    --status-active-glow: rgba(22, 163, 74, 0.28);
+    --status-partial: #d97706;
+    --status-partial-glow: rgba(217, 119, 6, 0.28);
+    --status-inactive: #c2bbb0;
+
+    --danger: #dc2626;
+    --danger-soft: rgba(220, 38, 38, 0.08);
+    --danger-border: rgba(220, 38, 38, 0.25);
+
+    --success: #16a34a;
+    --success-soft: rgba(22, 163, 74, 0.08);
+    --success-border: rgba(22, 163, 74, 0.25);
+
+    --warning: #d97706;
+    --warning-soft: rgba(217, 119, 6, 0.08);
+    --warning-border: rgba(217, 119, 6, 0.25);
+
+    --info: #2563eb;
+    --info-soft: rgba(37, 99, 235, 0.08);
+    --info-border: rgba(37, 99, 235, 0.25);
+
+    --shadow-sm: 0 2px 10px rgba(35, 32, 30, 0.06);
+    --shadow-lg: 0 16px 36px rgba(35, 32, 30, 0.14);
+    --scrollbar-thumb: #d8d2c3;
+    --scrollbar-thumb-hover: #a68d6b;
+    --switch-track: #d5cfc1;
+
+    color-scheme: light;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    height: 100vh;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+    height: 100%;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+    color: inherit;
+    transition: all 0.16s ease;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+input {
+    font-family: inherit;
+    color: var(--text-main);
+}
+
+input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.25s ease-out forwards;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--border-strong);
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
