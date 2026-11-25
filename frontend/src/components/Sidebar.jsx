@@ -8,7 +8,6 @@ import {
     Settings,
     Sun,
     Moon,
-    Type,
 } from 'lucide-react'
 import styles from './Sidebar.module.css'
 
@@ -40,7 +39,9 @@ export default function Sidebar({
             <div className={styles.header}>
                 <div className={styles.brand} onClick={() => handleSelect('all')}>
                     <span className={styles.brandIcon}>
-                        <Type size={16} strokeWidth={2.4} />
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                            <path d="M1 2h6v2.1H3.2V7h3v2h-3v5H1V2zm8 0h6v2.1h-3.8V7h3v2h-3v5H9V2z" />
+                        </svg>
                     </span>
                     <h1 className={styles.title}>Fantoma F</h1>
                 </div>

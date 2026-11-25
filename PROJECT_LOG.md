@@ -4,6 +4,21 @@
 
 ---
 
+## [v1.4.2] — 2026-11-25 — White FF Monogram Icon
+
+### Stage: Visual Polish
+
+**What was implemented:**
+- **New app & tray icon**: Replaced `build/appicon.png` (512×512) and multi-size `build/windows/icon.ico` (16–48px 32-bit BGRA DIB + 64–256px PNG) with a crisp white geometric **FF** monogram on a transparent background, aligned to the 16×16 pixel grid for sharp system tray rendering.
+- **Sidebar brand mark** (`Sidebar.jsx`): Matched the in-app header mark to the same **FF** monogram SVG.
+
+**Files changed:**
+- `build/appicon.png`, `build/windows/icon.ico`
+- `frontend/src/components/Sidebar.jsx`
+- `version.go` — bumped `AppVersion` to `1.4.2`
+
+---
+
 ## [v1.4.1] — 2026-11-25 — Remove GDI Calls for Instant Batch Activation/Deactivation
 
 ### Stage: Performance Hotfix
